@@ -1,0 +1,275 @@
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+html {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mg-left-10 {
+  margin-left: 10%;
+}
+
+/* Main CSS */
+
+/*  Start Header CSS */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  z-index: 1;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background-color: #d9d9d9;
+  z-index: 1;
+}
+
+.name-and-icon-box {
+  position: absolute;
+  width: 15%;
+  height: 90px;
+  /* background-color: black;  */
+}
+
+.icon {
+  border-radius: 50px;
+  position: absolute;
+  top: 5%;
+  height: 80px;
+  width: 37%;
+  margin-left: 10px;
+  background-color: #922121;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nameCOP {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 1000;
+  font-size: 20px;
+  position: absolute;
+  top: 17%;
+  left: 44%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.search-box {
+  position: absolute;
+  top: 18%;
+  right: 1%;
+  display: flex;
+  align-items: center;
+}
+
+.box-text {
+  position: relative;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+}
+
+#suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#suggestion-list li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#suggestion-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.search-icon {
+  font-size: 45px;
+}
+
+.box-text>input {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000;
+  background-color: #d9d9d9;
+  font-size: 30px;
+}
+
+/* End Header CSS */
+/* Start CONTENT CSS */
+.content {
+  position: relative;
+  margin-top: 0.9%;
+  padding-bottom: 125px;
+  background-color: #ffffffa8;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 11.5%;
+  display: flex;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  background-color: #F7EBEB;
+  align-items: center;
+}
+
+.nav .stock-nav {
+  margin-left: 5%;
+}
+
+.nav .stock-nav:hover,
+.nav .blabla:hover {
+  background-color: #EBCECE;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.nav>div {
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 47px;
+  text-align: center;
+  padding-top: 6px;
+}
+
+/* black box for test fixed */
+
+.super-box {
+  position: relative;
+  top: 100px;
+  height: 500px;
+  width: 100%;
+  background-color: #000;
+}
+
+.stock-content {
+  position: relative;
+  top: 125px;
+  height: 100%;
+  width: 100%;
+  display: none;
+  color: white;
+  font-size: large;
+}
+
+.show-Content {
+  display: block;
+}
+
+.disable {
+  display: none;
+}
+
+.chart_content {
+  margin-left: 40px;
+  width: 53%;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 450px;
+}
+
+#chartContainer {
+  height: 400px;
+}
+
+.grah_option,
+#time_option,
+.timeDWM,
+.time5_15_30_60 {
+  display: flex;
+  padding-top: 2px;
+  padding-left: 2px;
+  color: black;
+  text-align: center;
+  font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+.btn_line_graph,
+.btn_col_graph {
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.btn_min {
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 10%;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.btn_min:hover,
+.btn_line_graph:hover,
+.btn_col_graph:hover {
+  background-color: rgb(175, 169, 169);
+}
+
+#time_option {
+  border-radius: 2px;
+}
+
+.most_table {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 40%; 
+  height: 465px;
+}
+
+/* End CONTENT CSS */

@@ -1,0 +1,67 @@
+.market-positive-image {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 13px 7.5px;
+    border-color: transparent transparent #8ecf61;
+    background-position: 0 0;
+    display: block;
+    margin-right: 5%;
+}
+
+.market-negative-image {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 7.5px 0 7.5px;
+    border-color: #ed3b3b transparent transparent;
+    background-position: 0 0;
+    display: inline-block
+}
+
+.table_title {
+    justify-content: center;
+    display: flex;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.table_content {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.356);
+}
+
+.table th {
+    background-color: #EBCECE;
+}
+
+.table {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.table tr:not(:first-child):hover {
+    background-color: #F7EBEB;
+    transform: scale(1.025);
+    /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.up {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.down {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}

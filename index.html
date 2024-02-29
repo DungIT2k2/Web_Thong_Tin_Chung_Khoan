@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R-CHICKEN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="head">
+                <div class="name-and-icon-box">
+                    <div class="icon text-center">ICON</div>
+                    <div class="nameCOP">
+                        <label>TRADING</label>
+                        <label>R-CHICKEN</label>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <div class="search-icon">
+                        <i class="search-icon ti-search"></i>
+                    </div>
+                    <div class="box-text">
+                        <input type="text" id="search-input" placeholder="SEARCH">
+                        <ul id="suggestion-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="stock-nav">Home</div>
+            </div>
+        </div>
+        <div class="content">
+            <!-- <div class="nav">
+                    <div class="stock-nav">STOCK</div>
+                </div> -->
+            <div class="stock-content show-Content">
+                <div class="stock_table">
+                    <div class="table_title">Most Actively Traded</div>
+                    <div class="table_content">
+                        <table class="table" id="tb_most_traded">
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Price Changed</th>
+                                <th>Change Percent</th>
+                                <th>Volume</th>
+
+                            </tr>
+                            <tr>
+                                <td class="loading" colspan="5">
+                                    <img src="./icon/loading.gif">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="table_title">Top Gainers</div>
+                    <div class="table_content">
+                        <table class="table" id="tb_gainers">
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Price Changed</th>
+                                <th>Change Percent</th>
+                                <th>Volume</th>
+                            </tr>
+                            <tr>
+                                <td class="loading" colspan="5">
+                                    <img src="./icon/loading.gif">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="table_title">Top Losers</div>
+                    <div class="table_content">
+                        <table class="table" id="tb_losers">
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Price Changed</th>
+                                <th>Change Percent</th>
+                                <th>Volume</th>
+                            </tr>
+                            <tr>
+                                <td class="loading" colspan="5">
+                                    <img src="./icon/loading.gif">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="chart_content disable">
+                    <div class="grah_option">
+                        <!-- <button class="button_chart"
+                                onclick="choose_line_graph()"><svg
+                                    width="24"
+                                    height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"><path
+                                        d="M3.5 18.49L9.5 12.48L13.5 16.48L22 6.92L20.59 5.51L13.5 13.48L9.5 9.48L2 16.99L3.5 18.49Z"></path></svg></button>
+                            <button class="button_chart"
+                                onclick="choose_col_graph()"><svg width="24"
+                                    height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"><path
+                                        d="M9 4H7V6H5V18H7V20H9V18H11V6H9V4ZM9 16H7V8H9V16Z"></path><path
+                                        d="M19 8H17V4H15V8H13V15H15V20H17V15H19V8ZM17 13H15V10H17V13Z"></path></svg></button> -->
+                        <div class="btn_line_graph" onclick="choose_line_graph()"><svg width="24" height="24"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.5 18.49L9.5 12.48L13.5 16.48L22 6.92L20.59 5.51L13.5 13.48L9.5 9.48L2 16.99L3.5 18.49Z">
+                                </path>
+                            </svg></div>
+                        <div class=" btn_col_graph" onclick="choose_col_graph()"><svg width="24" height="24"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 4H7V6H5V18H7V20H9V18H11V6H9V4ZM9 16H7V8H9V16Z"></path>
+                                <path d="M19 8H17V4H15V8H13V15H15V20H17V15H19V8ZM17 13H15V10H17V13Z"></path>
+                            </svg></div>
+                        <select name id="time_option" onchange="performAction()">
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="1min">1min</option>
+                            <option value="5min">5min</option>
+                            <option value="15min">15min</option>
+                            <option value="30min">30min</option>
+                            <option value="60min">60min</option>
+                        </select>
+                    </div>
+                    <div class="timeDWM">
+                        <!-- <button class="button_chart"
+                                onclick="getdata_daily()">Daily</button>
+                            <button class="button_chart"
+                                onclick="getdata_weekly()">Weekly</button>
+                            <button class="button_chart"
+                                onclick="getdata_monthly()">Monthly</button> -->
+
+                        <div class="disable">
+                            <div class="btn_time time_Daily" onclick="getdata_daily()">Daily</div>
+                            <div class="btn_time time_Weekly" onclick="getdata_weekly()">Weekly</div>
+                            <div class="btn_time time_Monthly" onclick="getdata_monthly()">Monthly</div>
+                        </div>
+                    </div>
+                    <div class="time5_15_30_60">
+                        <!-- <button class="button_chart"
+                                onclick="getdata_1min()">1min</button>
+                            <button class="button_chart"
+                                onclick="getdata_5min()">5min</button>
+                            <button class="button_chart"
+                                onclick="getdata_15min()">15min</button>
+                            <button class="button_chart"
+                                onclick="getdata_30min()">30min</button>
+                            <button class="button_chart"
+                                onclick="getdata_60min()">60min</button> -->
+                        <div class="disable">
+                            <div class="btn_min btn_1min" onclick="getdata_1min()">1min</div>
+                            <div class="btn_min btn_5min" onclick="getdata_5min()">5min</div>
+                            <div class="btn_min btn_15min" onclick="getdata_15min()">15min</div>
+                            <div class="btn_min btn_30min" onclick="getdata_30min()">30min</div>
+                            <div class="btn_min btn_60min" onclick="getdata_60min()">60min</div>
+                        </div>
+
+                    </div>
+                    <div id="chartContainer">
+                        <div class="loading_chart">
+                            <img src="./icon/loading.gif">
+                        </div>
+                    </div>
+                    <div class="most_table">
+                        <div class="table_content">
+                            <table class="table" id="tb_offer">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Price Changed</th>
+                                    <th>Change Percent</th>
+                                </tr>
+                                <tr>
+                                        <td class="loading" colspan="5">
+                                            <img src="./icon/loading.gif">
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="table_title"></div>
+                <div id="data_chart">
+                    <table class="table" id="tb_data_chart"></table>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="super-box"></div> -->
+    </div>
+    <div class="footer"></div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/canvasjs.stock.min.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+
+</html>
