@@ -1,3 +1,4 @@
+**Các công việc được thực hiện trong dự án**
 + Lấy API thông tin các mã cổ phiếu
 + Xây dựng biểu đồ dùng thư viện (CanvasJS) từ thông tin của 1 mã cụ thể
 + Xây dựng tùy chỉnh của chart
